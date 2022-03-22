@@ -15,12 +15,17 @@ from bs4 import BeautifulSoup
 
 def get_content(html):
     soup = BeautifulSoup(html, 'html.parser')
-    blocks = soup.find('div', class_='jss170').find_all('div', class_='jss174')
-    for block in blocks:
-        trader = block.find('div', class_='jss179').text
-        rate = block.find('div', class_='jss182 jss180').text.split('₽/BTC')[-1]
-        limits = block.find('div', class_='jss183 jss180').get_text(strip=True).split(',')[-1]
-        print(f'Продавец: {trader} \nКурс ₽/BTC: {rate} \nЛимиты, ₽: {limits}\n')
+    print(soup.text)
+    # Классы в структуре меняются,
+    # поэтому код ниже уже не работает,
+    # если вы смените названия jss*** классов, все заработает
+
+    # blocks = soup.find('div', class_='jss420').find_all('div', class_='jss424')
+    # for block in blocks:
+    #     trader = block.find('div', class_='jss179').text
+    #     rate = block.find('div', class_='jss182 jss180').text.split('₽/BTC')[-1]
+    #     limits = block.find('div', class_='jss183 jss180').get_text(strip=True).split(',')[-1]
+    #     print(f'Продавец: {trader} \nКурс ₽/BTC: {rate} \nЛимиты, ₽: {limits}\n')
 
 
 def main(url):
