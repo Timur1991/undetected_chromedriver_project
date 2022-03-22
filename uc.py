@@ -8,7 +8,7 @@ from bs4 import BeautifulSoup
 Обход cloudflare защиты, с помощью undetected_chromedriver
 Живой пример сбора данных с обходом защиты cloudflare
 По всем возникшим вопросам, можете писать в группу https://vk.com/happython
-Ссылка на статью: None
+Ссылка на статью: https://vk.com/@happython-obhod-zaschity-cloudflare
 Отзывы, предложения, советы приветствуются.
 """
 
